@@ -1,0 +1,11 @@
+version: '3'
+services:
+  server:
+    build: .
+    ports:
+      - '3000:5000'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    env_file:
+      - ./.env
